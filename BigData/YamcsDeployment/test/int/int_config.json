@@ -1,6 +1,6 @@
 {
     "Svc.CommandDispatcher": "CdhCore.cmdDisp",
-    "Svc.CmdSequencer": "FprimeYamcsReference.cmdSeq",
+    "Svc.CmdSequencer": "BigData.cmdSeq",
     "Svc.FileDownlink": "FileHandling.fileDownlink",
     "Svc.FileManager": "FileHandling.fileManager",
     "Svc.FileUplink": "FileHandling.fileUplink",
@@ -12,10 +12,10 @@
     "Svc.DpManager": "DataProducts.dpMgr",
     "Svc.DpWriter": "DataProducts.dpWriter",
     "Svc.Health": "CdhCore.health",
-    "Svc.SystemResources": "FprimeYamcsReference.systemResources",
+    "Svc.SystemResources": "BigData.systemResources",
     "Svc.Version": "CdhCore.version",
-    "Svc.ActiveRateGroup": "FprimeYamcsReference.rateGroup1",
+    "Svc.ActiveRateGroup": "BigData.rateGroup1",
     "Svc.ComQueue": "ComCcsds.comQueue",
     "Svc.BufferManager": "ComCcsds.commsBufferManager",
-    "Svc.RateGroupDriver": "FprimeYamcsReference.rateGroupDriver"
+    "Svc.RateGroupDriver": "BigData.rateGroupDriver"
 }

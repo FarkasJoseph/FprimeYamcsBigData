@@ -11,10 +11,10 @@ telemetry packets YamcsDeploymentPackets {
     FileHandling.fileDownlink.PacketsSent
     FileHandling.fileManager.CommandsExecuted
 
-    FprimeYamcsReference.cmdSeq.CS_LoadCommands
-    FprimeYamcsReference.cmdSeq.CS_CancelCommands
-    FprimeYamcsReference.cmdSeq.CS_CommandsExecuted
-    FprimeYamcsReference.cmdSeq.CS_SequencesCompleted
+    BigData.cmdSeq.CS_LoadCommands
+    BigData.cmdSeq.CS_CancelCommands
+    BigData.cmdSeq.CS_CommandsExecuted
+    BigData.cmdSeq.CS_SequencesCompleted
     ComCcsds.comQueue.comQueueDepth
     ComCcsds.comQueue.buffQueueDepth
     ComCcsds.commsBufferManager.TotalBuffs
@@ -22,9 +22,9 @@ telemetry packets YamcsDeploymentPackets {
     ComCcsds.commsBufferManager.HiBuffs
     #CdhCore.tlmSend.SendLevel
 
-    FprimeYamcsReference.rateGroup1.RgMaxTime
-    FprimeYamcsReference.rateGroup2.RgMaxTime
-    FprimeYamcsReference.rateGroup3.RgMaxTime
+    BigData.rateGroup1.RgMaxTime
+    BigData.rateGroup2.RgMaxTime
+    BigData.rateGroup3.RgMaxTime
   }
 
   packet CDHErrors id 2 group 1 {
@@ -34,40 +34,40 @@ telemetry packets YamcsDeploymentPackets {
     FileHandling.fileDownlink.Warnings
     FileHandling.fileManager.Errors
 
-    FprimeYamcsReference.cmdSeq.CS_Errors
+    BigData.cmdSeq.CS_Errors
     ComCcsds.commsBufferManager.NoBuffs
     ComCcsds.commsBufferManager.EmptyBuffs
 
-    FprimeYamcsReference.rateGroup1.RgCycleSlips
-    FprimeYamcsReference.rateGroup2.RgCycleSlips
-    FprimeYamcsReference.rateGroup3.RgCycleSlips
+    BigData.rateGroup1.RgCycleSlips
+    BigData.rateGroup2.RgCycleSlips
+    BigData.rateGroup3.RgCycleSlips
   }
 
   packet SystemRes1 id 5 group 2 {
-    FprimeYamcsReference.systemResources.MEMORY_TOTAL
-    FprimeYamcsReference.systemResources.MEMORY_USED
-    FprimeYamcsReference.systemResources.NON_VOLATILE_TOTAL
-    FprimeYamcsReference.systemResources.NON_VOLATILE_FREE
+    BigData.systemResources.MEMORY_TOTAL
+    BigData.systemResources.MEMORY_USED
+    BigData.systemResources.NON_VOLATILE_TOTAL
+    BigData.systemResources.NON_VOLATILE_FREE
   }
 
   packet SystemRes3 id 6 group 2 {
-    FprimeYamcsReference.systemResources.CPU
-    FprimeYamcsReference.systemResources.CPU_00
-    FprimeYamcsReference.systemResources.CPU_01
-    FprimeYamcsReference.systemResources.CPU_02
-    FprimeYamcsReference.systemResources.CPU_03
-    FprimeYamcsReference.systemResources.CPU_04
-    FprimeYamcsReference.systemResources.CPU_05
-    FprimeYamcsReference.systemResources.CPU_06
-    FprimeYamcsReference.systemResources.CPU_07
-    FprimeYamcsReference.systemResources.CPU_08
-    FprimeYamcsReference.systemResources.CPU_09
-    FprimeYamcsReference.systemResources.CPU_10
-    FprimeYamcsReference.systemResources.CPU_11
-    FprimeYamcsReference.systemResources.CPU_12
-    FprimeYamcsReference.systemResources.CPU_13
-    FprimeYamcsReference.systemResources.CPU_14
-    FprimeYamcsReference.systemResources.CPU_15
+    BigData.systemResources.CPU
+    BigData.systemResources.CPU_00
+    BigData.systemResources.CPU_01
+    BigData.systemResources.CPU_02
+    BigData.systemResources.CPU_03
+    BigData.systemResources.CPU_04
+    BigData.systemResources.CPU_05
+    BigData.systemResources.CPU_06
+    BigData.systemResources.CPU_07
+    BigData.systemResources.CPU_08
+    BigData.systemResources.CPU_09
+    BigData.systemResources.CPU_10
+    BigData.systemResources.CPU_11
+    BigData.systemResources.CPU_12
+    BigData.systemResources.CPU_13
+    BigData.systemResources.CPU_14
+    BigData.systemResources.CPU_15
   }
 
   packet DataProducts id 21 group 3 {
@@ -160,6 +160,19 @@ telemetry packets YamcsDeploymentPackets {
 
  packet Version_Custom10 id 37 group 2 {
    CdhCore.version.CustomVersion10
+ }
+
+ packet HeightMap_Telem id 40 group 1 {
+    bigDataComponent.HeightMapMeta
+    bigDataComponent.HeightMapRows
+ }
+
+ packet MapChunk id 41 group 1 {
+    bigDataComponent.MapStream
+ }
+
+packet FloatSamples id 42 group 1 {
+    bigDataComponent.FloatSamplesTlm
  }
 
 } omit {

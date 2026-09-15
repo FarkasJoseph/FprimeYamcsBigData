@@ -9,8 +9,8 @@ module CdhCore {
         # This name will need to be updated if wishing to use this in a custom deployment
         phase Fpp.ToCpp.Phases.configComponents """
         CdhCore::tlmSend.setPacketList(
-            FprimeYamcsReference::YamcsDeployment_YamcsDeploymentPacketsTlmPackets::packetList, 
-            FprimeYamcsReference::YamcsDeployment_YamcsDeploymentPacketsTlmPackets::omittedChannels, 
+            BigData::YamcsDeployment_YamcsDeploymentPacketsTlmPackets::packetList, 
+            BigData::YamcsDeployment_YamcsDeploymentPacketsTlmPackets::omittedChannels, 
             1
         );
         """

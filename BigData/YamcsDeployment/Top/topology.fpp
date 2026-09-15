@@ -1,4 +1,4 @@
-module FprimeYamcsReference {
+module BigData {
 
   # ----------------------------------------------------------------------
   # Symbolic constants for port numbers
@@ -32,6 +32,8 @@ module FprimeYamcsReference {
     instance timer
     instance comDriver
     instance cmdSeq
+    instance bigDataComponent
+    instance dpDemo
 
   # ----------------------------------------------------------------------
   # Pattern graph specifiers
@@ -94,6 +96,10 @@ module FprimeYamcsReference {
       # Data Products to File Downlink
       DataProducts.Subtopology.dpCatFileOut -> FileHandling.Subtopology.fileDownlinkSendFile
       FileHandling.Subtopology.fileDownlinkFileComplete -> DataProducts.Subtopology.dpCatFileDone
+      dpDemo.productGetOut -> DataProducts.Subtopology.productGetIn
+      dpDemo.productSendOut -> DataProducts.Subtopology.productSendIn
+      dpDemo.productRequestOut -> DataProducts.Subtopology.productRequestIn
+      DataProducts.Subtopology.productResponseOut -> dpDemo.productRecvIn
     }
 
     connections RateGroups {
@@ -113,6 +119,7 @@ module FprimeYamcsReference {
       # Rate group 2
       rateGroupDriver.CycleOut[Ports_RateGroups.rateGroup2] -> rateGroup2.CycleIn
       rateGroup2.RateGroupMemberOut[0] -> cmdSeq.schedIn
+      rateGroup2.RateGroupMemberOut[1] -> dpDemo.run
 
       # Rate group 3
       rateGroupDriver.CycleOut[Ports_RateGroups.rateGroup3] -> rateGroup3.CycleIn

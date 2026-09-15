@@ -1,4 +1,4 @@
-# FprimeYamcsReference F´ project
+# BigData F´ project
 
 This is a basic project that shows F Prime/YAMCS integration. It has two key features:
 

@@ -1,3 +1,3 @@
-module FprimeYamcsReference {
+module BigData {
   system YamcsSystem: YamcsDeployment
 }

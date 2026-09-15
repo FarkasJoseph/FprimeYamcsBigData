@@ -1,4 +1,4 @@
-module FprimeYamcsReference {
+module BigData {
 
   # ----------------------------------------------------------------------
   # Base ID Convention
@@ -45,6 +45,16 @@ module FprimeYamcsReference {
     queue size Default.QUEUE_SIZE \
     stack size Default.STACK_SIZE \
     priority 40
+
+  instance bigDataComponent: BigDataComponent base id 0x10005000 \
+    queue size Default.QUEUE_SIZE \
+    stack size Default.STACK_SIZE \
+    priority 20
+
+  instance dpDemo: Ref.DpDemo base id 0x10015000 \
+    queue size Default.QUEUE_SIZE \
+    stack size Default.STACK_SIZE \
+    priority 19
 
   # ----------------------------------------------------------------------
   # Queued component instances

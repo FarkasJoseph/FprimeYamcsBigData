@@ -7,9 +7,9 @@
 #define YAMCSDEPLOYMENT_YAMCSDEPLOYMENTTOPOLOGY_HPP
 // Included for access to YamcsDeployment::TopologyState and YamcsDeployment::ConfigObjects::pingEntries. These definitions are required by the
 // autocoder, but are also used in this hand-coded topology.
-#include <FprimeYamcsReference/YamcsDeployment/Top/YamcsDeploymentTopologyDefs.hpp>
+#include <BigData/YamcsDeployment/Top/YamcsDeploymentTopologyDefs.hpp>
 
-namespace FprimeYamcsReference {
+namespace BigData {
 /**
  * \brief initialize and run the F´ topology
  *
@@ -51,7 +51,7 @@ void setupTopology(const TopologyState& state);
  * Step 1, 2, 3, and 4 must occur in-order as the tasks must be stopped before being joined. These tasks must be stopped
  * and joined before any active resources may be deallocated.
  *
- * For an explanation of the required type FprimeYamcsReference::TopologyState see: FprimeYamcsReferenceTopologyDefs.hpp.
+ * For an explanation of the required type BigData::TopologyState see: BigDataTopologyDefs.hpp.
  *
  * \param state: state object provided to setupTopology
  */
@@ -78,5 +78,5 @@ void startRateGroups(const Fw::TimeInterval& interval = Fw::TimeInterval(1,0));
  */
 void stopRateGroups();
 
-} // namespace FprimeYamcsReference
+} // namespace BigData
 #endif

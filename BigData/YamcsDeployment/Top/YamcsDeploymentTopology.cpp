@@ -4,17 +4,17 @@
 //
 // ======================================================================
 // Provides access to autocoded functions
-#include <FprimeYamcsReference/YamcsDeployment/Top/YamcsDeploymentTopologyAc.hpp>
+#include <BigData/YamcsDeployment/Top/YamcsDeploymentTopologyAc.hpp>
 // Note: Uncomment when using Svc:TlmPacketizer
-//#include <FprimeYamcsReference/YamcsDeployment/Top/YamcsDeploymentPacketsAc.hpp>
+//#include <BigData/YamcsDeployment/Top/YamcsDeploymentPacketsAc.hpp>
 
 // Necessary project-specified types
 #include <Fw/Types/MallocAllocator.hpp>
 #include <cstring>
 
-// Public functions for use in main program are namespaced with deployment module FprimeYamcsReference
+// Public functions for use in main program are namespaced with deployment module BigData
 // This is also the namespace where the topology components are instantiated by FPP.
-namespace FprimeYamcsReference {
+namespace BigData {
 
 // Instantiate a malloc allocator for cmdSeq buffer allocation
 Fw::MallocAllocator mallocator;
@@ -114,4 +114,4 @@ void teardownTopology(const TopologyState& state) {
 
     tearDownComponents(state);
 }
-};  // namespace FprimeYamcsReference
+};  // namespace BigData

@@ -21,3 +21,6 @@ __pycache__/
 
 # YAMCS runtime data
 yamcs-data/
+
+# Renamify workspace
+.renamify/

@@ -4,7 +4,7 @@
 //
 // ======================================================================
 // Used to access topology functions
-#include <FprimeYamcsReference/YamcsDeployment/Top/YamcsDeploymentTopology.hpp>
+#include <BigData/YamcsDeployment/Top/YamcsDeploymentTopology.hpp>
 // OSAL initialization
 #include <Os/Os.hpp>
 // Used for signal handling shutdown
@@ -36,7 +36,7 @@ void print_usage(const char* app) {
  * @param signum
  */
 static void signalHandler(int signum) {
-    FprimeYamcsReference::stopRateGroups();
+    BigData::stopRateGroups();
 }
 
 /**
@@ -78,7 +78,7 @@ int main(int argc, char* argv[]) {
         }
     }
     // Object for communicating state to the topology
-    FprimeYamcsReference::TopologyState inputs;
+    BigData::TopologyState inputs;
     inputs.hostname = hostname;
     inputs.port = port_number;
 
@@ -88,9 +88,9 @@ int main(int argc, char* argv[]) {
     (void)printf("Hit Ctrl-C to quit\n");
 
     // Setup, cycle, and teardown topology
-    FprimeYamcsReference::setupTopology(inputs);
-    FprimeYamcsReference::startRateGroups(Fw::TimeInterval(1,0));  // Program loop cycling rate groups at 1Hz
-    FprimeYamcsReference::teardownTopology(inputs);
+    BigData::setupTopology(inputs);
+    BigData::startRateGroups(Fw::TimeInterval(1,0));  // Program loop cycling rate groups at 1Hz
+    BigData::teardownTopology(inputs);
     (void)printf("Exiting...\n");
     return 0;
 }

@@ -23,7 +23,7 @@
 #include "Svc/Subtopologies/ComCcsds/Ports_ComBufferQueueEnumAc.hpp"
 
 // Include autocoded FPP constants
-#include "FprimeYamcsReference/YamcsDeployment/Top/FppConstantsAc.hpp"
+#include "BigData/YamcsDeployment/Top/FppConstantsAc.hpp"
 
 /**
  * \brief required ping constants
@@ -45,19 +45,19 @@
  * ```
  */
 namespace PingEntries {
-    namespace FprimeYamcsReference_rateGroup1 {enum { WARN = 3, FATAL = 5 };}
-    namespace FprimeYamcsReference_rateGroup2 {enum { WARN = 3, FATAL = 5 };}
-    namespace FprimeYamcsReference_rateGroup3 {enum { WARN = 3, FATAL = 5 };}
-    namespace FprimeYamcsReference_cmdSeq {enum { WARN = 3, FATAL = 5 };}
+    namespace BigData_rateGroup1 {enum { WARN = 3, FATAL = 5 };}
+    namespace BigData_rateGroup2 {enum { WARN = 3, FATAL = 5 };}
+    namespace BigData_rateGroup3 {enum { WARN = 3, FATAL = 5 };}
+    namespace BigData_cmdSeq {enum { WARN = 3, FATAL = 5 };}
 }  // namespace PingEntries
 
 // Definitions are placed within the same namespace as the FPP module that contains the topology.
-namespace FprimeYamcsReference {
+namespace BigData {
 
 /**
  * \brief required type definition to carry state
  *
- * The topology autocoder requires an object that carries state with the name `FprimeYamcsReference::TopologyState`. Only the type
+ * The topology autocoder requires an object that carries state with the name `BigData::TopologyState`. Only the type
  * definition is required by the autocoder and the contents of this object are otherwise opaque to the autocoder. The
  * contents are entirely up to the definition of the project. This deployment uses subtopologies.
  */
@@ -71,6 +71,6 @@ struct TopologyState {
 };
 
 namespace PingEntries = ::PingEntries;
-}  // namespace FprimeYamcsReference
+}  // namespace BigData
 
 #endif
